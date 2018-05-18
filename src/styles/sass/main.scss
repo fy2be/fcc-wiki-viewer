@@ -56,21 +56,71 @@ input {
     margin: 25px 0 0 0;
     text-align: center;
     border-radius: 10px;
-    border-color: rgba(99,99,99,0.1);
+    border: 1px solid rgba(99,99,99,0.1);
     outline: 0;
-}
 
-.random-search {
-    font-size: 11px;
-
-    &:hover {
-        color: #bada55;
-        font-weight: bold;
-        cursor: pointer;
+    &:hover,
+    &:focus {
+        border: 1px solid #999999;
     }
 }
 
+.random-search {
+    font-size: 12px;
+    transition: transform .7s ease;
+
+    a {
+        text-decoration: none;
+        color: #999999;
+    }
+
+    &:hover {
+        transform: scale(1.5);
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
+}
+
 .mid {
-    @include debug(green);
-    margin-top: 50px;
+    // @include debug(green);
+    margin-top: 30px;
+}
+
+.result {
+    // @include debug(pink);
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    border: 1px solid rgba(99,99,99,0.1);
+    transition: transform .7s ease;
+
+    &:hover {
+        cursor: pointer;
+        border: 1px solid #999999;
+        transform: scale(1.1);
+        box-shadow: 3px 3px #999999;
+    }
+
+    .thumb {
+        width: auto;
+        height: auto;
+        max-width: 200px;
+        max-height: 100px;
+        overflow: hidden;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    }
+
 }
