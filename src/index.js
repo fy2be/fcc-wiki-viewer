@@ -1,4 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import WikiViewer from './components/WikiViewer';
 
-ReactDOM.render(<App />, document.getElementById('main'));
+ReactDOM.render(<WikiViewer />, document.getElementById('main'));
