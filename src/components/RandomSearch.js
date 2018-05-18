@@ -2,7 +2,9 @@ import React from 'react';
 
 const RandomSearch = () => (
     <div className='random-search'>
-        <span>Random Article</span>
+        <a href='https://en.wikipedia.org/wiki/Special:Random' target='_blank'>
+            Random Article
+        </a>
     </div>
 );
 
