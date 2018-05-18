@@ -6,13 +6,15 @@ const Result = () => (
             <img src="http://www.stravian.eoldal.hu/img/picture/2/ww100.gif" />
         </div>
 
-        <div className='title'>
-            Travian - browser-based, massively multiplayer game
-        </div>
+        <div className='text'>
+            <h3>
+                Travian - browser-based, massively multiplayer game
+            </h3>
 
-        <div className='details'>
-            Travian is a persistent, browser-based, massively multiplayer, online real-time strategy game developed by the German software company Travian Games.[1] It was originally written and released in June 2004 by Gerhard Müller.
-            Set in classical antiquity, Travian is a predominantly militaristic real-time strategy game.
+            <p>
+                Travian is a persistent, browser-based, massively multiplayer, online real-time strategy game developed by the German software company Travian Games.[1] It was originally written and released in June 2004 by Gerhard Müller.
+                Set in classical antiquity, Travian is a predominantly militaristic real-time strategy game.
+            </p>
         </div>
 
     </div>
