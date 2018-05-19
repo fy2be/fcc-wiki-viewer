@@ -56,7 +56,7 @@ class WikiViewer extends React.Component {
     render() {
         return (
             <div className='container'>
-                <div className='top full'>
+                <div className='top'>
                     <Logo />
                     <SearchBox handleSearch={this.handleSearch} searchRef={this.searchRef} />
                     <RandomSearch />
