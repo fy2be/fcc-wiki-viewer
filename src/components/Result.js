@@ -1,23 +1,33 @@
 import React from 'react';
 
-const Result = () => (
-    <div className='result'>
-        <div className='thumb'>
-            <img src="http://www.stravian.eoldal.hu/img/picture/2/ww100.gif" />
+const Result = (props) => {
+    if (!props.details.thumbnail) {
+        props.details.thumbnail = { source: '/wiki.svg' };
+        props.details.pageimage = 'Wikipedia - The Free Encyclopedia';
+    }
+
+    const handleClick = () => {
+        document.location.href = `https://en.wikipedia.org/?curid=${props.details.pageid}`;
+    }
+
+    return (
+        <div className='result' onClick={handleClick}>
+            <div className='thumb'>
+                <img src={props.details.thumbnail.source} alt={props.details.pageimage} />
+            </div>
+
+            <div className='text'>
+                <h3>
+                    {props.details.title}
+                </h3>
+
+                <p>
+                    {props.details.extract}
+                </p>
+            </div>
+
         </div>
-
-        <div className='text'>
-            <h3>
-                Travian - browser-based, massively multiplayer game
-            </h3>
-
-            <p>
-                Travian is a persistent, browser-based, massively multiplayer, online real-time strategy game developed by the German software company Travian Games.[1] It was originally written and released in June 2004 by Gerhard Müller.
-                Set in classical antiquity, Travian is a predominantly militaristic real-time strategy game.
-            </p>
-        </div>
-
-    </div>
-);
+    );
+};
 
 export default Result;
