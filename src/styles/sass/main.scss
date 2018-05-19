@@ -20,9 +20,10 @@
 .container {
     @include flex(column, center);
     width: 70vw;
-    margin: 30px auto;
+    min-height: 100vh;
+    margin: 0 auto;
     padding: 30px;
-    // @include debug(red);
+    justify-content: center;
 }
 
 .top {
@@ -35,8 +36,17 @@
     display: flex;
 
     img {
-        width: 150px;
-        height: 150px;
+        transition: all 2s;
+    }
+
+    img.little {
+        min-width: 120px;
+        min-height: 120px;
+    }
+
+    img.big {
+        min-width: 300px;
+        min-height: 300px;
     }
 }
 
@@ -104,10 +114,8 @@ input {
     }
 
     .thumb {
-        width: auto;
-        height: auto;
-        max-width: 200px;
-        max-height: 100px;
+        min-width: 150px;
+        min-height: 150px;
         overflow: hidden;
     }
 
