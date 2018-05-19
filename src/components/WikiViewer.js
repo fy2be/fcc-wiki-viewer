@@ -29,11 +29,21 @@ class WikiViewer extends React.Component {
                     results.push(<Result key={index} details={item} />);
                 });
 
-                this.setState({ results });
+                return results;
             })
-            .catch((e) => {
-                console.log('Something goes wrong - ' + e);
+            .catch(e => {
+                const results = [
+                    <Result
+                        key={0}
+                        details={{
+                            title: 'The page does not exist.',
+                            extract: 'There were no results matching the query. Try another one.'
+                        }}
+                    />
+                ];
+                return results;
             })
+            .then(results => this.setState({ results }))
     };
 
     results = () => {
