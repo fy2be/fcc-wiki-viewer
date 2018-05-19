@@ -7,7 +7,8 @@ const Result = (props) => {
     }
 
     const handleClick = () => {
-        document.location.href = `https://en.wikipedia.org/?curid=${props.details.pageid}`;
+        if (props.details.pageid)
+            document.location.href = `https://en.wikipedia.org/?curid=${props.details.pageid}`;
     }
 
     return (
